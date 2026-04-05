@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockfall Night</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="selection-overlay" class="selection-overlay">
+      <div class="selection-shell">
+        <h2 id="selection-title">Choose Your Spawn Point</h2>
+        <p id="selection-subtitle">Loading biome choices...</p>
+        <div id="selection-grid" class="selection-grid">
+          <button class="selection-card" data-biome="plains" type="button">Plains</button>
+          <button class="selection-card" data-biome="forest" type="button">Forest</button>
+          <button class="selection-card" data-biome="desert" type="button">Desert</button>
+          <button class="selection-card" data-biome="mountains" type="button">Mountains</button>
+          <button class="selection-card" data-biome="ocean" type="button">Ocean</button>
+        </div>
+      </div>
+    </div>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">2D Survival Prototype</p>
+          <h1>Blockfall Night</h1>
+          <p class="subtitle">
+            Explore an even wider world with lakes, rivers, and villages, build shelter, craft gear, and survive a full Minecraft-style mob roster.
+          </p>
+        </div>
+        <div class="hero-badges">
+          <span>Wider World</span>
+          <span>Water + Swimming</span>
+          <span>Villages + Houses</span>
+          <span>Hostile + Passive Mobs</span>
+          <span>Building + Hunger</span>
+        </div>
+      </section>
+
+      <section class="game-layout">
+        <div class="canvas-frame">
+          <div class="frame-toolbar">
+            <button id="fullscreen-toggle" class="frame-button" type="button">Fullscreen</button>
+          </div>
+          <canvas id="game" width="1120" height="672"></canvas>
+        </div>
+
+        <aside class="sidebar">
+          <section class="panel">
+            <h2>Controls</h2>
+            <ul>
+              <li><strong>A / D</strong> move</li>
+              <li><strong>W / Space</strong> jump or swim upward</li>
+              <li><strong>Left click</strong> mine or attack mobs</li>
+              <li><strong>Right click</strong> open chests or place selected block</li>
+              <li><strong>1-9</strong> choose block or tool</li>
+              <li><strong>H</strong> eat 1 food</li>
+              <li><strong>E</strong> open or close crafting</li>
+              <li><strong>Left click recipe</strong> craft it from the recipe panel</li>
+              <li><strong>R</strong> respawn after death at a fresh spawn point</li>
+            </ul>
+          </section>
+
+          <section class="panel">
+            <h2>Goal</h2>
+            <p>
+              Chop trees, mine stone, swim through water, raid village supplies,
+              place blocks, craft your table and wooden tools, and build a safe
+              base before zombies, creepers, skeletons, spiders, slimes, and
+              endermen reach you. Hunt animals and fish for food before
+              starvation starts doing damage.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2>Survival</h2>
+            <ul>
+              <li><strong>Water</strong>: slows falling and lets you swim up</li>
+              <li><strong>Villages</strong>: villagers now roam inside village bounds</li>
+              <li><strong>Animals</strong>: cows, pigs, sheep, and chickens wander the surface</li>
+              <li><strong>Night mobs</strong>: zombies, creepers, skeletons, spiders, slimes, and endermen</li>
+              <li><strong>Creepers</strong>: blasts damage terrain, but never remove water tiles</li>
+              <li><strong>Food</strong>: fills 1 hunger bar when eaten</li>
+              <li><strong>Hand crafting</strong>: planks, sticks, and crafting tables</li>
+              <li><strong>Table crafting</strong>: wooden tools, furnaces, and chests</li>
+              <li><strong>Death</strong>: each death rolls a fresh spawn point before respawn</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
